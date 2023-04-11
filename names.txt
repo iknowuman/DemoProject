@@ -1,0 +1,21 @@
+Raw image: An uncompressed version of the image file. Raw files are named so because they are not yet processed while containing all information for image processing. YUV image: YUV is a color encoding system used as part of a color image pipeline. It encodes a color image, allowing reduced bandwidth for chrominance components. A CMOS sensor is an image sensor type that consists of an array of pixels, each containing a photo detector and active amplifier widely used in digital camera technologies such as cell phones, CCTV, web cameras, etc. A Bayer pattern is an array for arranging RGB color filters on a square grid of photo sensors. Its particular arrangement of red, blue, and green color filters live above the millions of light-sensitive photosite on the surface of a sensor chip. Image sensor: A device that captures light when it strikes the lens of a camera and converts it into an electronic signal and then transmits it to an imaging device processor, which transforms the electronic signal into a digital image. Image signal processing (ISP) pipeline: a method to convert an image into digital form by performing operations like demosaicing, noise reduction, auto exposure, autofocus, auto white balance and image sharpening designed for digital processing and image quality enhancement. Auto-exposure (AE) and auto-white balance (AWB): detect the constantly changing ambient light qualities of the scene you’re photographing and adjusts the camera to maintain just the right brightness and color.
+What is an Image Signal processor (ISP) and what does ISP tuning mean?
+Significant processing is necessary to transform a RAW image from sensor and convert it into a high-quality image. It is here that an ISP comes to use. An Image signal processor is a dedicated processor that takes the raw data from a camera sensor and converts it into a workable image. The ISP performs many of the following steps to deliver a high-quality image for a particular camera sensor and use-case:
+
+The Color Correction Matrix LogiCORE™ can be used for color correction operations such as adjusting white balance, color cast, brightness, or contrast in an RGB image.
+Colour interpolation
+Receiving Bayer inputs from the image sensor converts raw image, typically captured using a Bayer color filter array (CFA) into a color RGB image. This process is also known as demosaicing.
+Lens shading correction
+Is applied to improve brightness and color non-uniformity towards the image periphery
+Defect pixel correction
+Corrects defective pixels on the image sensor
+Gamma correction
+Compensates for the nonlinearity of relative intensity as the frame buffer value changes in output displays
+Local tone mapping
+Combines different exposures together in order to increase the local contrast within disparate regions of an HDR scene
+Auto Exposure
+Performs automatic fine tuning of the image brightness according to the amount of light that reaches the camera sensor
+Auto Focus
+Auto focus automatically adjusts the sharpness of the image, which improves the image definition. All types of actuator, lens position tuning, AF stats engine tuning etc
+Gamma correction can be used to control the overall brightness of an image. It can be used with images that are found to be either bleached out or too dark [12]. Expansion and compression of pixel intensity values are desired for darker and faded images 
+White balance is the adjustment of a digital photograph to make its colors appear more realistic.
